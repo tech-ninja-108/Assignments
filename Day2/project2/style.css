@@ -1,0 +1,221 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .main {
+      width: 94%;
+      max-width: 1250px;
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    /* Navbar */
+
+    .navbar {
+      height: 100px;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 32px;
+      transform: rotate(-10deg);
+    }
+
+    .links {
+      position: absolute;
+      top: 38px;
+      left: 32%;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 45px;
+      font-size: 17px;
+    }
+
+    .links a:hover {
+      color: #ff4b16;
+    }
+
+    .button {
+      position: absolute;
+      top: 22px;
+      right: 0;
+      padding: 17px 24px;
+      background-color: #151515;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Heading */
+
+    .heading {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 105px;
+      font-weight: bold;
+      letter-spacing: -7px;
+    }
+
+    /* Category buttons */
+
+    .category {
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .category button {
+      border: none;
+      background-color: #171717;
+      color: white;
+      padding: 14px 28px;
+      margin: 0 5px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .category .active {
+      background-color: #ff4b12;
+    }
+
+    /* Cards */
+
+    .cards {
+      margin-top: 38px;
+      text-align: center;
+    }
+
+    .card {
+      width: 32%;
+      min-height: 440px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0.5%;
+      background-color: #141414;
+      border-radius: 25px;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px 23px 25px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #54200e;
+      color: #ff965e;
+      padding: 9px 15px;
+      border-radius: 20px;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .date {
+      color: #777;
+      font-size: 16px;
+    }
+
+    .card:hover img {
+      transform: scale(1.04);
+      transition: 0.4s;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 900px) {
+      .heading {
+        font-size: 70px;
+      }
+
+      .links {
+        left: 25%;
+      }
+
+      .links a {
+        margin-right: 18px;
+      }
+
+      .card {
+        width: 47%;
+        margin: 10px 1%;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 600px) {
+      .navbar {
+        height: 170px;
+      }
+
+      .logo {
+        left: 10px;
+      }
+
+      .button {
+        right: 10px;
+      }
+
+      .links {
+        top: 100px;
+        left: 10px;
+      }
+
+      .links a {
+        display: inline-block;
+        margin-right: 14px;
+        font-size: 14px;
+      }
+
+      .heading {
+        margin-top: 10px;
+        font-size: 48px;
+        letter-spacing: -3px;
+      }
+
+      .category button {
+        padding: 11px 17px;
+        margin: 5px 2px;
+      }
+
+      .card {
+        width: 100%;
+        margin: 12px 0;
+      }
+    }
