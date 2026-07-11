@@ -1,0 +1,129 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            width: 94%;
+            height: 90vh;
+            margin: 5vh auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: linear-gradient(
+                to right,
+                #ffcb05 0%,
+                #ffcb05 61%,
+                #fff0bd 61%,
+                #fff0bd 100%
+            );
+        }
+
+        .logo {
+            position: absolute;
+            top: 35px;
+            left: 45px;
+            font-size: 38px;
+            font-weight: bold;
+            font-style: italic;
+            color: #2164a5;
+            transform: rotate(-8deg);
+        }
+
+        .menu {
+            position: absolute;
+            top: 35px;
+            right: 45px;
+            font-size: 40px;
+        }
+
+        .text {
+            width: 420px;
+            position: absolute;
+            top: 26%;
+            left: 6%;
+        }
+
+        .text h4 {
+            font-size: 15px;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+        }
+
+        .text h1 {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+
+        .text p {
+            width: 390px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .count {
+            position: absolute;
+            left: 6%;
+            bottom: 22%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .image {
+            width: 38%;
+            position: absolute;
+            top: 12%;
+            right: 15%;
+            mix-blend-mode: multiply;
+        }
+
+        .dots {
+            position: absolute;
+            top: 44%;
+            right: 25px;
+            font-size: 28px;
+            line-height: 25px;
+            color: #ffc400;
+            text-align: center;
+        }
+
+        .dots .first {
+            color: black;
+        }
+
+        .ball {
+            width: 190px;
+            height: 190px;
+            position: absolute;
+            left: 45px;
+            bottom: -70px;
+            border: 20px solid rgba(100, 80, 0, 0.15);
+            border-radius: 50%;
+        }
+
+        .ball-line {
+            width: 190px;
+            height: 20px;
+            position: absolute;
+            top: 65px;
+            left: -20px;
+            background-color: rgba(100, 80, 0, 0.15);
+        }
+
+        .ball-center {
+            width: 65px;
+            height: 65px;
+            position: absolute;
+            top: 42px;
+            left: 42px;
+            border: 15px solid rgba(100, 80, 0, 0.15);
+            border-radius: 50%;
+            background-color: #ffcb05;
+        }
