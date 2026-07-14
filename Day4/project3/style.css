@@ -1,0 +1,712 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #090909;
+  background-color: #111111;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dashboard {
+  display: grid;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 880px;
+  margin: auto;
+  padding: 16px;
+  border-radius: 34px;
+  background-color: #18191b;
+
+  grid-template-columns:
+    minmax(250px, 0.95fr)
+    minmax(260px, 1fr)
+    minmax(260px, 1fr)
+    minmax(260px, 0.95fr);
+
+  grid-template-rows:
+    270px
+    170px
+    170px
+    210px;
+
+  grid-template-areas:
+    "trainer app font strength"
+    "trainer logo logo strength"
+    "goal logo logo phone"
+    "visit trainers woman phone";
+
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+
+/* Trainer card */
+
+.trainer-card {
+  grid-area: trainer;
+  background-color: #dab9c1;
+}
+
+.trainer-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-logo {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  background-color: black;
+}
+
+.trainer-stats {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  left: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.small-stat {
+  display: flex;
+  min-width: 31%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border-radius: 13px;
+  color: white;
+  background-color: rgba(20, 20, 20, 0.85);
+}
+
+.small-stat > span {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffd800;
+}
+
+.small-stat div {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-stat strong {
+  font-size: 14px;
+}
+
+.small-stat small {
+  font-size: 8px;
+}
+
+/* App card */
+
+.app-card {
+  grid-area: app;
+  padding: 28px;
+  background: linear-gradient(135deg, #ffd800, #ffe41d);
+}
+
+.barcode-lines {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 7px;
+}
+
+.barcode-lines span {
+  display: block;
+  width: 4px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #111111;
+}
+
+.barcode-lines span:nth-child(2),
+.barcode-lines span:nth-child(5) {
+  height: 48px;
+}
+
+.app-card h2 {
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 23px;
+}
+
+.download-buttons a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: white;
+  background-color: black;
+}
+
+.download-buttons a > span {
+  font-size: 21px;
+}
+
+.download-buttons a div {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-buttons small {
+  font-size: 7px;
+}
+
+.download-buttons strong {
+  font-size: 12px;
+}
+
+/* Font card */
+
+.font-card {
+  grid-area: font;
+  padding: 30px;
+}
+
+.font-card > p {
+  font-size: 11px;
+}
+
+.font-card h2 {
+  margin-top: 10px;
+  font-size: 29px;
+}
+
+.font-card .body-label {
+  margin-top: 34px;
+}
+
+.font-card h3 {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.font-colors {
+  display: flex;
+  margin-top: 40px;
+}
+
+.font-colors span {
+  display: block;
+  width: 25%;
+  height: 15px;
+  border-radius: 10px;
+}
+
+.peach {
+  background-color: #dc8e78;
+}
+
+.yellow {
+  background-color: #ffe000;
+}
+
+.white {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+/* Strength */
+
+.strength-card {
+  display: flex;
+  grid-area: strength;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.strength-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.mini-colors {
+  display: flex;
+}
+
+.mini-colors i {
+  display: block;
+  width: 13px;
+  height: 17px;
+}
+
+.mini-colors i:first-child {
+  background-color: black;
+}
+
+.mini-colors i:last-child {
+  background-color: #ffdd00;
+}
+
+.strength-top p {
+  font-size: 11px;
+}
+
+.strength-card > h2 {
+  margin-top: 42px;
+  font-size: 43px;
+  line-height: 1.12;
+}
+
+.location-box {
+  margin-top: auto;
+  padding: 23px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffc1b8, #f6b1a7);
+}
+
+.location-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.location-row > span {
+  display: flex;
+  width: 39px;
+  height: 39px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffdd00;
+  background-color: #000000;
+}
+
+.location-row p {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.location-box > strong {
+  display: block;
+  margin-top: 38px;
+  font-size: 13px;
+}
+
+/* Goal card */
+
+.goal-card {
+  display: flex;
+  grid-area: goal;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+}
+
+.goal-card h2 {
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.goal-bottom {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.goal-bottom span {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffd900;
+  font-size: 21px;
+  font-weight: bold;
+  background-color: #080808;
+}
+
+.goal-bottom p {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Main logo */
+
+.logo-card {
+  display: flex;
+  grid-area: logo;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fffdf3, #fff8dc);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand-logo h1 {
+  font-size: 75px;
+  letter-spacing: -5px;
+}
+
+.logo-symbol {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 90px;
+}
+
+.logo-symbol i {
+  position: absolute;
+  display: block;
+  width: 75px;
+  height: 22px;
+  background-color: #000000;
+  transform: skew(-30deg);
+}
+
+.logo-symbol i:first-child {
+  top: 4px;
+  left: 18px;
+}
+
+.logo-symbol i:nth-child(2) {
+  top: 34px;
+  left: 5px;
+  width: 58px;
+}
+
+.logo-symbol i:last-child {
+  top: 64px;
+  left: 20px;
+  width: 35px;
+}
+
+/* Phone card */
+
+.phone-card {
+  grid-area: phone;
+  padding: 18px;
+  background: linear-gradient(145deg, #f7b1a4, #efa69a);
+}
+
+.phone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone-header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.small-flex-logo {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffd800;
+  background-color: #111111;
+}
+
+.phone-frame {
+  position: relative;
+  height: calc(100% - 42px);
+  margin-top: 12px;
+  overflow: hidden;
+  border: 5px solid #111111;
+  border-radius: 44px 44px 0 0;
+  background-color: #111111;
+}
+
+.phone-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-content {
+  position: absolute;
+  bottom: 28px;
+  left: 18px;
+}
+
+.phone-content h2 {
+  color: white;
+  font-size: 22px;
+}
+
+.phone-content a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 28px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ffdb00;
+}
+
+.refresh-icon {
+  position: absolute;
+  right: 19px;
+  bottom: 37px;
+  color: white;
+  font-size: 65px;
+}
+
+/* Visit card */
+
+.visit-card {
+  grid-area: visit;
+  background-color: #ffd900;
+}
+
+.visit-image {
+  width: 72%;
+  height: 100%;
+}
+
+.visit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visit-yellow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background-color: #ffdd00;
+}
+
+.visit-card > a {
+  position: absolute;
+  bottom: 34px;
+  left: 28px;
+  display: flex;
+  min-width: 230px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  color: white;
+  font-size: 26px;
+  background-color: rgba(20, 20, 20, 0.82);
+}
+
+/* Trainers */
+
+.trainers-card {
+  display: flex;
+  grid-area: trainers;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background: linear-gradient(135deg, #f7b4aa, #f0a69c);
+}
+
+.trainer-content h2 {
+  font-size: 20px;
+}
+
+.trainer-content > strong {
+  display: block;
+  margin-top: 25px;
+  font-size: 57px;
+}
+
+.trainer-content > small {
+  font-size: 10px;
+}
+
+.trainer-members {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+}
+
+.trainer-members img {
+  width: 49px;
+  height: 49px;
+  margin-left: -8px;
+  border: 3px solid #f2aaa0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Woman card */
+
+.woman-card {
+  grid-area: woman;
+  background-color: #d3c5c3;
+}
+
+.woman-card > img {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  z-index: 2;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background-shape {
+  position: absolute;
+  inset: 0;
+}
+
+.background-shape span {
+  position: absolute;
+  display: block;
+  width: 65%;
+  height: 70px;
+  background-color: #ffda00;
+  transform: skew(-30deg);
+}
+
+.background-shape span:first-child {
+  top: 30px;
+  left: -25px;
+}
+
+.background-shape span:last-child {
+  right: -20px;
+  bottom: 30px;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .dashboard {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "trainer app"
+      "trainer font"
+      "strength strength"
+      "goal logo"
+      "visit phone"
+      "trainers phone"
+      "woman woman";
+  }
+
+  .trainer-card {
+    min-height: 550px;
+  }
+
+  .app-card,
+  .font-card,
+  .goal-card {
+    min-height: 260px;
+  }
+
+  .strength-card {
+    min-height: 500px;
+  }
+
+  .logo-card {
+    min-height: 300px;
+  }
+
+  .phone-card {
+    min-height: 550px;
+  }
+
+  .visit-card,
+  .trainers-card,
+  .woman-card {
+    min-height: 260px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  body {
+    padding: 8px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 9px;
+    border-radius: 20px;
+
+    grid-template-areas:
+      "trainer"
+      "app"
+      "font"
+      "strength"
+      "goal"
+      "logo"
+      "visit"
+      "trainers"
+      "woman"
+      "phone";
+  }
+
+  .brand-logo h1 {
+    font-size: 55px;
+  }
+
+  .strength-card > h2 {
+    font-size: 36px;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+  }
+
+  .trainer-members {
+    margin-top: 30px;
+  }
+}
