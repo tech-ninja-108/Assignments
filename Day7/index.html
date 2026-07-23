@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Manager</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-theme="light">
+    <div class="main">
+      <!-- Sidebar -->
+
+      <aside class="side">
+        <div class="logo">
+          <div class="logoicon">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+
+          <h2>Task Manager</h2>
+        </div>
+
+        <nav class="links">
+          <button class="navlink active" data-page="dashboard">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </button>
+
+          <button class="navlink" data-page="tasks">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Tasks</span>
+          </button>
+
+          <button class="navlink" data-page="demo">
+            <i class="fa-solid fa-code"></i>
+            <span>DOM Demo</span>
+          </button>
+
+          <button class="navlink" data-page="about">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>About</span>
+          </button>
+        </nav>
+
+        <div class="sidebox">
+          <div class="sideicon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+
+          <h3>Stay Productive!</h3>
+
+          <p>Complete your daily tasks and keep improving every day.</p>
+        </div>
+
+        <div class="copyright">
+          <p>© 2026 Task Manager</p>
+          <p>Made by Satyam</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+
+      <main class="content">
+        <!-- Top Navbar -->
+
+        <header class="topbar">
+          <div class="mobilemenu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              type="text"
+              class="searchbox searchBox"
+              placeholder="Search your tasks..."
+            />
+          </div>
+
+          <div class="topright">
+            <button class="themebtn">
+              <i class="fa-regular fa-moon"></i>
+              <span>Dark Mode</span>
+            </button>
+
+            <div class="profile">
+              <div class="profileimg">S</div>
+
+              <div class="profiletext">
+                <h4>Satyam Yadav</h4>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Page -->
+
+        <section class="page dashboardpage" id="dashboard">
+          <div class="welcome">
+            <div>
+              <p class="smalltitle">TASK DASHBOARD</p>
+
+              <h1>Manage your tasks easily</h1>
+
+              <p>
+                Add, edit, complete and organize your daily tasks in one place.
+              </p>
+            </div>
+
+            <div class="welcomeicon">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+          </div>
+
+          <!-- Add Task Form -->
+
+          <section class="addbox">
+            <div class="boxtitle">
+              <div class="titleicon">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+
+              <div>
+                <h2>Add New Task</h2>
+                <p>Fill the details to create a new task</p>
+              </div>
+            </div>
+
+            <div class="taskform">
+              <div class="formgroup tasktitle">
+                <label for="taskInput"> Task Title </label>
+
+                <input
+                  type="text"
+                  id="taskInput"
+                  class="inputbox"
+                  placeholder="What needs to be done?"
+                  value=""
+                />
+              </div>
+
+              <div class="formgroup">
+                <label for="category"> Category </label>
+
+                <select id="category" class="categorybox">
+                  <option value="">Select category</option>
+
+                  <option value="study">Study</option>
+
+                  <option value="work">Work</option>
+
+                  <option value="personal">Personal</option>
+
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="formgroup">
+                <label for="priority"> Priority </label>
+
+                <select id="priority" class="prioritybox">
+                  <option value="low">Low</option>
+
+                  <option value="medium">Medium</option>
+
+                  <option value="high">High</option>
+                </select>
+              </div>
+
+              <div class="formgroup">
+                <label for="dueDate"> Due Date </label>
+
+                <input type="date" id="dueDate" class="datebox" />
+              </div>
+
+              <button class="add">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Task</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- Statistics -->
+
+          <section class="stats">
+            <div class="statcard">
+              <div class="staticon totalicon">
+                <i class="fa-solid fa-list"></i>
+              </div>
+
+              <div>
+                <p>Total Tasks</p>
+                <h2 class="total2">0</h2>
+              </div>
+            </div>
+
+            <div class="statcard">
+              <div class="staticon activeicon">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+
+              <div>
+                <p>Active Tasks</p>
+                <h2 class="active2">0</h2>
+              </div>
+            </div>
+
+            <div class="statcard">
+              <div class="staticon completeicon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div>
+                <p>Completed</p>
+                <h2 class="complete2">0</h2>
+              </div>
+            </div>
+
+            <div class="statcard">
+              <div class="staticon highicon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+
+              <div>
+                <p>High Priority</p>
+                <h2 class="high2">0</h2>
+              </div>
+            </div>
+          </section>
+
+          <!-- Task List -->
+
+          <section class="taskbox">
+            <div class="tasktop">
+              <div>
+                <h2>My Tasks</h2>
+                <p>View and manage all your tasks</p>
+              </div>
+
+              <button class="clear">
+                <i class="fa-regular fa-trash-can"></i>
+                Clear Completed
+              </button>
+            </div>
+
+            <div class="filterbox">
+              <button class="filterbtn total1 filteractive" data-filter="all">
+                All (0)
+              </button>
+
+              <button class="filterbtn active1" data-filter="active">
+                Active (0)
+              </button>
+
+              <button class="filterbtn complete1" data-filter="completed">
+                Completed (0)
+              </button>
+
+              <button class="filterbtn" data-filter="study">Study</button>
+
+              <button class="filterbtn" data-filter="work">Work</button>
+
+              <button class="filterbtn" data-filter="personal">Personal</button>
+            </div>
+
+            <!-- Empty Message -->
+
+            <div class="emptybox">
+              <div class="emptyicon">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+
+              <h3>No tasks available</h3>
+
+              <p>Add your first task using the form above.</p>
+            </div>
+
+            <!-- JavaScript Task Cards -->
+
+            <div class="tasklist"></div>
+          </section>
+        </section>
+
+        <!-- Tasks Page -->
+
+        <section class="page taskpage hide" id="tasks">
+          <div class="pagetitle">
+            <div>
+              <p class="smalltitle">TASKS</p>
+              <h1>All Tasks</h1>
+
+              <p>Search, filter and manage your tasks.</p>
+            </div>
+          </div>
+
+          <div class="tasksearch">
+            <div class="searchinput">
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              <input
+                type="text"
+                class="tasksearchbox searchBox"
+                placeholder="Search task by title..."
+              />
+            </div>
+
+            <select class="categoryfilter">
+              <option value="all">All Categories</option>
+
+              <option value="study">Study</option>
+
+              <option value="work">Work</option>
+
+              <option value="personal">Personal</option>
+
+              <option value="other">Other</option>
+            </select>
+
+            <select class="priorityfilter">
+              <option value="all">All Priorities</option>
+
+              <option value="high">High</option>
+
+              <option value="medium">Medium</option>
+
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="alltasklist">
+            <!-- Tasks can also be rendered here -->
+          </div>
+        </section>
+
+        <!-- DOM Demo Page -->
+
+        <section class="page demopage hide" id="demo">
+          <div class="pagetitle">
+            <div>
+              <p class="smalltitle">DOM EVENTS</p>
+              <h1>Event Bubbling & Capturing</h1>
+
+              <p>Click the child button and check the browser console.</p>
+            </div>
+          </div>
+
+          <div class="demobox">
+            <div class="demoinfo">
+              <h2>Event Flow Demo</h2>
+
+              <p>
+                This section demonstrates how events move through nested HTML
+                elements.
+              </p>
+
+              <div class="eventbuttons">
+                <button class="bubblingbtn activeevent">Bubbling Mode</button>
+
+                <button class="capturingbtn">Capturing Mode</button>
+              </div>
+            </div>
+
+            <div class="grandparent" data-box="grandparent">
+              <span>Grandparent</span>
+
+              <div class="parent" data-box="parent">
+                <span>Parent</span>
+
+                <button class="child" data-box="child">Child Button</button>
+              </div>
+            </div>
+
+            <div class="eventresult">
+              <h3>Event Output</h3>
+
+              <div class="output">
+                <p>Click the child button to see the result.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attribute Demo -->
+
+          <div class="attributebox">
+            <div class="boxtitle">
+              <div class="titleicon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <div>
+                <h2>Attribute & Property Demo</h2>
+                <p>Demonstration of DOM attribute methods</p>
+              </div>
+            </div>
+
+            <div
+              class="attributecard"
+              data-id="101"
+              data-status="active"
+              data-category="study"
+            >
+              <h3>Sample Task Element</h3>
+
+              <p>This card contains custom data attributes.</p>
+
+              <div class="attributeactions">
+                <button class="getattribute">Get Attribute</button>
+
+                <button class="setattribute">Set Attribute</button>
+
+                <button class="removeattribute">Remove Attribute</button>
+
+                <button class="checkattribute">Check Attribute</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Page -->
+
+        <section class="page aboutpage hide" id="about">
+          <div class="pagetitle">
+            <div>
+              <p class="smalltitle">ABOUT PROJECT</p>
+              <h1>Interactive Task Manager</h1>
+
+              <p>
+                A task manager built using HTML, CSS and Vanilla JavaScript.
+              </p>
+            </div>
+          </div>
+
+          <div class="aboutgrid">
+            <div class="aboutcard">
+              <div class="abouticon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <h3>DOM Manipulation</h3>
+
+              <p>
+                Tasks are dynamically created, updated and removed using
+                JavaScript DOM methods.
+              </p>
+            </div>
+
+            <div class="aboutcard">
+              <div class="abouticon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+
+              <h3>Local Storage</h3>
+
+              <p>
+                Tasks remain saved in the browser even after refreshing the
+                page.
+              </p>
+            </div>
+
+            <div class="aboutcard">
+              <div class="abouticon">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+
+              <h3>Task Filters</h3>
+
+              <p>Tasks can be filtered by status, category and priority.</p>
+            </div>
+
+            <div class="aboutcard">
+              <div class="abouticon">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+              </div>
+
+              <h3>Theme Toggle</h3>
+
+              <p>The interface supports both light and dark modes.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
